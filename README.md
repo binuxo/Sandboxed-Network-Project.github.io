@@ -60,9 +60,11 @@ Application Server VM:
 
 # IP Configuration Steps
 **Ubuntu Desktop**:
+
 Once logged in, I assigned the IP to the Ubuntu VM by going to my IPV4 network settings and changing the method to manual to disable DHCP. I then entered the chosen IP, gateway, and netmasks in the addresses section and applied the settings.
 
 **Ubuntu Server**:
+
 Once logged in, we need to assign static IP addresses to the appropriate network interfaces. I did this by editing the network configuration file using **sudo nano /etc/neplan/00-installer-config.yaml**. I edited the file to look like this:
 
 network:
@@ -120,7 +122,8 @@ sudo netfilter-persistent save
 sudo netfilter-persistent reload
 
 
-Bitnami Debian WordPress:
+**Bitnami Debian WordPress**:
+
 Once logged in, I applied the chosen static IP address by editing the network configuration file using **sudo nano /etc/network/interfaces**. I edited it to look like:
 
 auto enp0s3
