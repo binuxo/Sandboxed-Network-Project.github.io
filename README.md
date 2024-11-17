@@ -7,5 +7,5 @@ This project demonstrates a sandboxed virtual network built with VirtualBox, inc
 ##Contents
 - ![Network Diagram] (Docs/net diagram.png)
 - [IP Address Table] (Docs/IP_Address_Table_Sandboxed_Network.docx)
-- [Functional Test results] (Docs/Functional Test Results)
+- [Functional Test results] (https://github.com/kojau/Sanboxed-Network-Project.github.io/tree/main/Docs/Functional%20Test%20Results)
 - [Report] (Docs/REPORT.docx)
