@@ -2,8 +2,8 @@
 JOSHUA TERNA-KAAINJO
 
 
-This is my step-by-step implementation of a sandboxed network using VirtualBox. The network consists of three VMs: a Desktop VM, a Gateway VM, and an Application Server VM configured in a private sandboxed environment. The network ensures secure, isolated communication.
-We were giving static IP ranges to assign to our subnets and gateways. I chose **192.168.30.2** for my Desktop VM, **192.168.30.1** for the gateway VM interface card which acts as the default gateway for the desktop, **192.168.130.1** for the gateway VM interface card acting as the default gateway for the Application server, and **192.168.130.2** for my Application Server VM. I also configured NAT on a third interface card on my gateway server to enable internet access.
+This is my step-by-step implementation of a sandboxed network using VirtualBox. The network consists of three VMs: a Desktop VM, a Gateway VM, and an Application VM configured in a private sandboxed environment. The network ensures secure, isolated communication.
+We were giving static IP ranges to assign to our subnets and gateways. I chose **192.168.30.2** for my Desktop VM, **192.168.30.1** for the gateway VM interface card which acts as the default gateway for the desktop, **192.168.130.1** for the gateway VM interface card acting as the default gateway for the Application VM, and **192.168.130.2** for my Application VM. I also configured NAT on a third interface card on my gateway server to enable internet access.
 The three VMs I used for this network are:
 -	Desktop VM: Ubuntu Desktop
 -	Gateway VM: Ubuntu Server
