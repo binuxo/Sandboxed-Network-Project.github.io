@@ -105,7 +105,7 @@ netmask 255.255.255.0
 gateway 192.168.130.1
 
 and applied changes by doing a reboot using sudo reboot.
-
+<br><br/>
 
 # Functional Test Results
 <figure>
