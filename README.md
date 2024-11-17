@@ -7,7 +7,7 @@ We were giving static IP ranges to assign to our subnets and gateways. I chose 1
 The three VMs I used for this network are:
 -	Desktop VM: Ubuntu Desktop
 -	Gateway VM: Ubuntu Server
--	Application VM: Bitnami Debian WordPress <br>
+-	Application VM: Bitnami Debian WordPress <br><br/>
 
 
 Network Diagram
@@ -80,15 +80,15 @@ version: 2
 
 I applied these changes with sudo netplan apply and enabled IP forwarding by uncommenting the net.ipv4.ip_forward=1 line in the configuration file /etc/sysctl.conf and applied the changes with sudo sysctl -p.
 I configured iptables to allow forwarding using:
-## Allow forwarding between enp0s8 and enp0s9
+Allow forwarding between enp0s8 and enp0s9
 sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -j ACCEPT
-sudo iptables -A FORWARD -i enp0s9 -o enp0s8 -j ACCEPT
-## Allow forwarding between enp0s3 and the internal interfaces
+sudo iptables -A FORWARD -i enp0s9 -o enp0s8 -j ACCEPT<br>
+Allow forwarding between enp0s3 and the internal interfaces
 sudo iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT
 sudo iptables -A FORWARD -i enp0s8 -o enp0s3 -j ACCEPT
 sudo iptables -A FORWARD -i enp0s3 -o enp0s9 -j ACCEPT
-sudo iptables -A FORWARD -i enp0s9 -o enp0s3 -j ACCEPT
-## Enable NAT on enp0s3 for internet access
+sudo iptables -A FORWARD -i enp0s9 -o enp0s3 -j ACCEPT<br>
+Enable NAT on enp0s3 for internet access
 sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE 
 and made the changes permanent using:
 sudo apt install iptables-persistent
