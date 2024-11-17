@@ -1,11 +1,11 @@
-# Sanboxed-Network-Project
+# Sandboxed Network Project
 
-##Overview
+Overview
 
-This project demonstrates a sandboxed virtual network built with VirtualBox, including a desktop VM, a gateway VM, and an application server VM. The network ensures secure, isolated communication.
+This project demonstrates a sandboxed virtual network built with VirtualBox, including a desktop VM (Ubuntu Desktop), a gateway VM (Ubuntu Server), and an application server VM (Bitnami Debian Wordpress). The network ensures secure, isolated communication.
 
-##Contents
-- [Network Diagram](https://github.com/kojau/Sanboxed-Network-Project.github.io/blob/main/Docs/net%20diagram.png)
-- [IP Address Table](https://github.com/kojau/Sanboxed-Network-Project.github.io/blob/main/Docs/IP_Address_Table_Sandboxed_Network.docx)
-- [Functional Test results](https://github.com/kojau/Sanboxed-Network-Project.github.io/tree/main/Docs/Functional%20Test%20Results)
+Contents
+- [Network Diagram](Docs/net_diagram.png)
+- [IP Address Table](Docs/IP_Address_Table_Sandboxed_Network.docx)
+- [Functional Test results](Docs/Functional_Test_Results)
 - [Report](Docs/REPORT.docx)
