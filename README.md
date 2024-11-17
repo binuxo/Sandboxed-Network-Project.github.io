@@ -31,7 +31,7 @@ Networking Knowledge:
 - Basic understanding of IP addressing, routing, and firewall rules.<br><br/>
 
 # VirtualBox Setup
-1. Create Virtual Machines: Open VirtualBox and click "New" to create the desktop VM. Choose the appropriate OS type and version, allocate memory (e.g., 2GB), and create a virtual hard disk with a suitable size (e.g., 20GB). Repeat the process to create the gateway VM and Application Server VM.
+Create Virtual Machines: Open VirtualBox and click "New" to create the desktop VM. Choose the appropriate OS type and version, allocate memory (e.g., 2GB), and create a virtual hard disk with a suitable size (e.g., 20GB). Repeat the process to create the gateway VM and Application Server VM.<br><br/>
 
 Desktop VM:
 - OS: Ubuntu Desktop.
@@ -49,9 +49,9 @@ Application Server VM:
 - OS: Bitnami Debian WordPress.
 - CPU: 2 cores.
 - RAM: 4GB.
-- Storage: 20GB.
+- Storage: 20GB.<br><br/>
 
-2. Configure Network Adapters:
+Configure Network Adapters:
 - All VMs should use an Internal Network to ensure isolation. I did this by going to network settings in your VirtualBox and changing the adapters from NAT to Internal Network. Rename your Application VM adapter to match the gateway adapter used to communicate with the application server.
 - Configure the Gateway VM to have three adapters:
   - Adapter 1: Internal Network for communication with Desktop VM
