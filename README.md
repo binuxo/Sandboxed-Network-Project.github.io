@@ -5,6 +5,7 @@ Overview
 This project demonstrates a sandboxed virtual network built with VirtualBox, including a desktop VM (Ubuntu Desktop), a gateway VM (Ubuntu Server), and an application server VM (Bitnami Debian Wordpress). The network ensures secure, isolated communication.
 
 
+
 Network Diagram
 ![Network Diagram](Docs/net_diagram.png)
 
