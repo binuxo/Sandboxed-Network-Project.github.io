@@ -28,10 +28,10 @@ Software Requirements:
 - Bitnami WordPress VM for the Application Server.
 
 Networking Knowledge:
-- Basic understanding of IP addressing, routing, and firewall rules.
-<br><br/>
+- Basic understanding of IP addressing, routing, and firewall rules.<br><br/>
+
 # VirtualBox Setup
-1.	Create Virtual Machines: Open VirtualBox and click "New" to create the desktop VM. Choose the appropriate OS type and version, allocate memory (e.g., 2GB), and create a virtual hard disk with a suitable size (e.g., 20GB). Repeat the process to create the gateway VM and Application Server VM.
+1. Create Virtual Machines: Open VirtualBox and click "New" to create the desktop VM. Choose the appropriate OS type and version, allocate memory (e.g., 2GB), and create a virtual hard disk with a suitable size (e.g., 20GB). Repeat the process to create the gateway VM and Application Server VM.
 
 Desktop VM:
 - OS: Ubuntu Desktop.
@@ -51,13 +51,13 @@ Application Server VM:
 - RAM: 4GB.
 - Storage: 20GB.
 
-2.	Configure Network Adapters:
+2. Configure Network Adapters:
 - All VMs should use an Internal Network to ensure isolation. I did this by going to network settings in your VirtualBox and changing the adapters from NAT to Internal Network. Rename your Application VM adapter to match the gateway adapter used to communicate with the application server.
 - Configure the Gateway VM to have three adapters:
   - Adapter 1: Internal Network for communication with Desktop VM
   - Adapter 2: NAT for internet access.
-  - Adapter 3: Internal Network for communication with Application Server VM (Rename to match with Application Server Adapter)
-<br><br/>
+  - Adapter 3: Internal Network for communication with Application Server VM (Rename to match with Application Server Adapter)<br><br/>
+  
 # IP Configuration Steps
 **Ubuntu Desktop**:
 
@@ -89,8 +89,8 @@ addresses:
 
 dhcp4: false
 
-version: 2
-<br><br/>
+version: 2<br><br/>
+
 I applied these changes with **sudo netplan apply** and enabled IP forwarding by uncommenting the **net.ipv4.ip_forward=1** line in the configuration file **/etc/sysctl.conf** and applied the changes with **sudo sysctl -p**.
 
 I configured iptables to allow forwarding using:
@@ -136,8 +136,7 @@ netmask 255.255.255.0
 
 gateway 192.168.130.1
 
-and applied changes by doing a reboot using sudo reboot.
-<br><br/>
+and applied changes by doing a reboot using sudo reboot.<br><br/>
 
 # Functional Test Results
 <figure>
