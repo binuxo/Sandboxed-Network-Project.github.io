@@ -15,7 +15,7 @@ Network Diagram
 
 IP Address Table
 <embed src="Docs/IP_Address_Table_Sandboxed_Network.pdf" width="100%" height="400px" />
-
+<br><br/>
 
 # Prerequisites
 Hardware Requirements:
@@ -82,12 +82,12 @@ I applied these changes with sudo netplan apply and enabled IP forwarding by unc
 I configured iptables to allow forwarding using:
 Allow forwarding between enp0s8 and enp0s9
 sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -j ACCEPT
-sudo iptables -A FORWARD -i enp0s9 -o enp0s8 -j ACCEPT<br>
+sudo iptables -A FORWARD -i enp0s9 -o enp0s8 -j ACCEPT<br><br/>
 Allow forwarding between enp0s3 and the internal interfaces
 sudo iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT
 sudo iptables -A FORWARD -i enp0s8 -o enp0s3 -j ACCEPT
 sudo iptables -A FORWARD -i enp0s3 -o enp0s9 -j ACCEPT
-sudo iptables -A FORWARD -i enp0s9 -o enp0s3 -j ACCEPT<br>
+sudo iptables -A FORWARD -i enp0s9 -o enp0s3 -j ACCEPT<br><br/>
 Enable NAT on enp0s3 for internet access
 sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE 
 and made the changes permanent using:
@@ -115,7 +115,7 @@ and applied changes by doing a reboot using sudo reboot.
   </video>
   <figcaption>Video 1: Desktop VM (Ubuntu Desktop)</figcaption>
 </figure>
-
+<br><br/>
 <figure>
   <video width="640" height="360" controls>
     <source src="Docs/Functional_Test_Results/Server _A00020435_-screen0.webm" type="video/webm">
@@ -123,7 +123,7 @@ and applied changes by doing a reboot using sudo reboot.
   </video>
   <figcaption>Video 2: Gateway VM (Ubuntu Server)</figcaption>
 </figure>
-
+<br><br/>
 <figure>
   <video width="640" height="360" controls>
     <source src="Docs/Functional_Test_Results/common-wordpress-6-6.6.2-r6-debian-12-amd64-screen0.webm" type="video/webm">
