@@ -119,8 +119,7 @@ sudo apt install iptables-persistent
 
 sudo netfilter-persistent save
 
-sudo netfilter-persistent reload
-
+sudo netfilter-persistent reload<br><br/>
 
 **Bitnami Debian WordPress**:
 
