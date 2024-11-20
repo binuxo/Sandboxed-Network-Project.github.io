@@ -1,5 +1,3 @@
-# Sandboxed Network Project (NETWORKING AND SECURITY PRACTICE)
-JOSHUA TERNA-KAAINJO
 
 
 This is my step-by-step implementation of a sandboxed network using VirtualBox. The network consists of three VMs: a Desktop VM, a Gateway VM, and an Application VM configured in a private sandboxed environment. The network ensures secure, isolated communication.
@@ -11,7 +9,7 @@ The three VMs I used for this network are:
 
 
 Network Diagram
-![Network Diagram](Docs/net_diagram.png)
+![Network Diagram](Docs/net_diagram.png) <br><br/>
 
 IP Address Table
 <embed src="Docs/IP_Address_Table_Sandboxed_Network.pdf" width="100%" height="400px" />
