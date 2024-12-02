@@ -12,7 +12,7 @@ Network Diagram
 ![Network Diagram](Docs/net_diagram.png) <br><br/>
 
 IP Address Table
-<embed src="Docs/IP_Address_Table_Sandboxed_Network.pdf" width="100%" height="400px" />
+![IP Adress Table](doc/IPTable.png) <br><br/>
 <br><br/>
 
 # Prerequisites
